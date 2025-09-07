@@ -1,0 +1,27 @@
+{
+  "env": {
+    "MAX_MCP_OUTPUT_TOKENS": "60000",
+    "BASH_DEFAULT_TIMEOUT_MS": "300000",
+    "BASH_MAX_TIMEOUT_MS": "600000",
+    "MAX_THINKING_TOKENS": "8192"
+  },
+  "includeCoAuthoredBy": false,
+  "permissions": {
+    "allow": [
+      "Write(**)",
+      "Edit(**)",
+      "MultiEdit(**)",
+      "Delete(**)"
+    ],
+    "deny": [
+      "Delete(.claude/memory_bank/decisions/**)",
+      "Delete(.claude/memory_bank/patterns/**)",
+      "Delete(.claude/memory_bank/architecture/**)",
+      "Delete(.claude/memory_bank/troubleshooting/**)",
+      "Edit(.claude/memory_bank/archive/**)",
+      "MultiEdit(.claude/memory_bank/archive/**)",
+      "Delete(.claude/memory_bank/archive/**)"
+    ]
+  },
+  "model": "sonnet"
+}

@@ -1,0 +1,18 @@
+# Ignore everything at repo root
+/*
+
+# Keep these root files
+!/.gitignore
+!/CLAUDE.md
+!/settings.json
+!/agents
+
+!/commands/
+/commands/*
+!/commands/context/
+!/commands/context/**
+
+!/workflows/
+/workflows/*
+!/workflows/memory-bank/
+!/workflows/memory-bank/**
