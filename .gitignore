@@ -3,6 +3,7 @@
 
 # Keep these root files
 !/.gitignore
+!/README.md
 !/CLAUDE.md
 !/settings.json
 !/agents
