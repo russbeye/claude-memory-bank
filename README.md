@@ -12,19 +12,14 @@ A structured context management system for Claude Code that provides intelligent
 
 ## Quick Start
 
-1. **Initialize your memory bank structure**:
+1. **Sync your first memory bank**:
    ```bash
-   mkdir -p .claude/memory_bank/{decisions,patterns,architecture,troubleshooting}
+   /update-memory-bank
    ```
 
 2. **Start with context discovery**:
    ```bash
    /context-query "src/**" --limit=10
-   ```
-
-3. **Sync your first memory bank**:
-   ```bash
-   /update-memory-bank
    ```
 
 That's it. Claude now has persistent, queryable knowledge about your project.
@@ -89,8 +84,6 @@ That's it. Claude now has persistent, queryable knowledge about your project.
 
 **Local Only** (gitignored):
 - `.claude/memory_bank/` - Your project's memory bank
-- `config/` - Personal configuration
-- `todos/` - Session todos and planning
 
 ## Key Workflows
 
@@ -114,8 +107,6 @@ That's it. Claude now has persistent, queryable knowledge about your project.
 
 The `settings.json` includes:
 - **Permissions**: Write/edit permissions with memory bank protections
-- **Environment**: Timeout and token limits optimized for context work
-- **Model Settings**: Uses Sonnet for the best balance of capability and speed
 
 ## Benefits
 
