@@ -12,12 +12,25 @@ A structured context management system for Claude Code that provides intelligent
 
 ## Quick Start
 
-1. **Sync your first memory bank**:
+1. **Clone this repository**:
+   ```bash
+   git clone git@github.com:russbeye/claude-memory-bank.git
+   cd claude-memory-bank
+   ```
+
+2. **Copy the system files to your Claude directory**:
+   ```bash
+   cp -r {agents,commands,workflows} ~/.claude/
+   cp CLAUDE.md ~/.claude/
+   # settings.json contains suggested permissions
+   ```
+
+3. **Sync your first memory bank**:
    ```bash
    /update-memory-bank
    ```
 
-2. **Start with context discovery**:
+4. **Start with context discovery**:
    ```bash
    /context-query "src/**" --limit=10
    ```
