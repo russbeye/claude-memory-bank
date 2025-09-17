@@ -28,6 +28,7 @@ A structured context management system for Claude Code that provides intelligent
 3. **Sync your first memory bank**:
    ```bash
    /update-memory-bank
+   # Will be put into `project/.claude/memory-bank`
    ```
 
 4. **Start with context discovery**:
