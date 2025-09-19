@@ -1,6 +1,10 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working in this repository.
+## Project Overview
+
+* This `CLAUDE.md` defines global guidance for Claude Code.  
+* It standardizes how to manage and query the context memory-bank, ensuring lean tokens and safe archive use.  
+* Always prefer granular memory files for day-to-day work, and follow the quick commands and safety rules when updating or backing up context.  
 
 ## AI Guidance
 
@@ -56,8 +60,6 @@ When asked to backup Memory Bank System files, you will copy the **granular memo
 ### Archive Directory
 
 Historic documentation is stored under **`.claude/memory_bank/archive/`** to optimize memory bank size while preserving implementation history. Each snapshot is dated and includes `claude-architecture-complete.md` plus a `CHANGELOG.md`. Treat the archive as **read-only** and **do not** load it for routine tasks; prefer granular files. See `archive/README.md` (if present) within the archive folder for an index.
-
-## Project Overview
 
 ## File & Directory Tasks (FAST)
 
