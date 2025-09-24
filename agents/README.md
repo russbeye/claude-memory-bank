@@ -4,9 +4,15 @@ Powerful AI assistants designed for specific development tasks. These agents are
 
 ## Quick Agent Reference
 
-| When You Need | Agent | Primary Use | Speed |
-|---------------|-------|-------------|-------|
-| **Find code/bugs** | `code-searcher` | Forensic code analysis, security scans | Ultra-fast with CoD mode |
+## Agents at a glance
+
+| When You Need  | Agent    | Primary Use | Speed  |
+| -------------- | -------- | ----------- | ------ |
+| **Find code/bugs** | `code-searcher` | Forensic code analysis, security scans (CoD) | Ultra-fast |
+| **Execute & test code** | `code-executor` | Generate and run code to validate logic (CoC) | Fast |
+| **Stepwise reasoning** | `code-thinker` | Sequential analysis, architecture tradeoffs, deep bug forensics (CoT) | Moderate |
+| **Verify answers** | `code-verifier` | Draft → self-questions → revise for accuracy (CoVe) | Moderate |
+| **Inject knowledge** | `code-knowledge` | Retrieve and apply standards & best practices (CoK) | Moderate |
 | **Design/UX help** | `ux-design-expert` | UI/UX optimization, design systems | 2-3 min |
 | **Current timestamp** | `get-current-datetime` | Get America/Chicago time | Instant |
 | **Delta sync** | `context-diff-agent` | Incremental memory bank updates | 30 sec |
@@ -14,24 +20,22 @@ Powerful AI assistants designed for specific development tasks. These agents are
 | **Full sync** | `memory-bank-synchronizer` | Complete memory bank refresh | 2-3 min |
 | **Check accuracy** | `stale-context-agent` | Detect outdated documentation | 1 min |
 
+
 ## Core Agents
 
 ### `code-searcher` - Code Analysis & Bug Hunting
 **Use for**: Finding specific code, security analysis, architectural understanding, debugging
 
 **Key Features**:
-- **Chain of Draft (CoD) Mode**: Ultra-concise analysis with 80-92% token reduction
-- **Forensic Analysis**: Deep code investigation and security vulnerability detection  
-- **Pattern Detection**: Identify architectural patterns and consistency issues
-- **Exact References**: Always provides file paths with line numbers
+* **Chain of Draft (CoD) Mode**: Ultra-concise analysis with 80-92% token reduction
+* **Forensic Analysis**: Deep code investigation and security vulnerability detection
+* **Pattern Detection**: Identify architectural patterns and consistency issues
+* **Exact References**: Always provides file paths with line numbers
 
 **Usage Examples**:
 ```text
 # Standard analysis
 "Where is the user authentication logic implemented?"
-
-# Ultra-fast CoD mode (use keywords: "CoD", "concise", "brief")
-"Use CoD to find payment processing bugs"
 "Concise analysis of error handling patterns"
 
 # Security analysis  
@@ -39,11 +43,120 @@ Powerful AI assistants designed for specific development tasks. These agents are
 "Find SQL injection risks in user input handling"
 ```
 
-**CoD Mode Benefits**: 
-- 7-20% of normal token usage
-- 50-75% faster responses
-- Perfect for rapid codebase exploration
-- Maintains 90-98% accuracy of standard mode
+**CoD Mode Benefits**:
+
+* 7-20% of normal token usage
+* 50-75% faster responses
+* Perfect for rapid codebase exploration
+* Maintains 90-98% accuracy of standard mode
+
+---
+
+### `code-executor` - Code Validation & Testing
+**Use for**: Generating and running code to validate logic, debug, or benchmark performance
+
+**Key Features**:
+* **Chain of Code (CoC) Mode**: Uses executable code as reasoning steps
+* **Bug Reproduction**: Write minimal tests to replicate failures
+* **Performance Benchmarking**: Measure algorithm efficiency with test harnesses
+* **Validation**: Verify data flow and transformation correctness
+
+**Usage Examples**:
+```text
+# Bug reproduction
+"Reproduce null pointer exception in checkout flow"
+
+# Performance
+"Benchmark sort algorithm with 10k inputs"
+
+# Data validation
+"Check if transformations preserve required fields"
+```
+
+**CoC Mode Benefits**:
+* Evidence-based conclusions via code execution
+* Prevents speculation with verifiable outputs
+* Minimal, non-destructive test snippets
+* Ideal for debugging and optimization
+
+---
+
+### `code-thinker` - Sequential Reasoning & Deep Analysis
+**Use for**: Breaking down complex issues into explicit steps, architectural analysis, root-cause debugging
+
+**Key Features**:
+* **Chain of Thought (CoT) Mode**: Transparent, step-by-step reasoning
+* **Architecture Decisions**: Compare tradeoffs and design choices
+* **Bug Forensics**: Identify root causes with logical progression
+* **Performance Reasoning**: Explain complexity and bottlenecks clearly
+
+**Usage Examples**:
+```text
+# Deadlock analysis
+"Why do we get deadlocks during batch imports?"
+
+# Architecture decision
+"Which data structure fits LRU cache best?"
+```
+
+**CoT Mode Benefits**:
+* Clear, sequential logic
+* Easy to follow decision trails
+* Focuses on reasoning over speculation
+* Great for complex architectural and debugging tasks
+
+---
+
+### `code-verifier` - Accuracy & Safety Checks
+**Use for**: Improving answer reliability through verification questions and revision
+
+**Key Features**:
+* **Chain of Verification (CoVe) Mode**: Draft → verify → revise
+* **Error Reduction**: Systematic self-checking process
+* **Question-driven**: Surfaces assumptions and weaknesses
+* **Final Revision**: Produces improved, validated answers
+
+**Usage Examples**:
+```text
+# Security risks
+"Summarize authentication system security risks"
+
+# Fix verification
+"Is the payment bug fix safe?"
+```
+
+**CoVe Mode Benefits**:
+* Increases accuracy via self-questioning
+* Reduces overlooked assumptions
+* Ensures safer, more reliable conclusions
+* Produces stronger final outputs
+
+---
+
+### `code-knowledge` - Standards & Best Practices
+**Use for**: Applying external standards, security practices, and industry benchmarks to code decisions
+
+**Key Features**:
+* **Chain of Knowledge (CoK) Mode**: Retrieve and apply authoritative knowledge
+* **Standards Compliance**: OWASP, NIST, RFCs, etc.
+* **Best Practices**: Integrates external guidance into recommendations
+* **Knowledge Application**: Turns sources into concrete fixes
+
+**Usage Examples**:
+```text
+# Password storage
+"What’s the recommended password storage policy?"
+
+# OAuth flow
+"Harden our OAuth flow based on standards"
+```
+
+**CoK Mode Benefits**:
+* Cites authoritative sources (OWASP, NIST, RFCs)
+* Produces concrete, standards-based fixes
+* Bridges code with external best practices
+* Ensures compliance and future-proofing
+
 
 ### `ux-design-expert` - UI/UX Optimization
 **Use for**: Interface design, user experience optimization, design systems, data visualization
